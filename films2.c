@@ -49,12 +49,13 @@ int main(void)
     }
 
 /* Program done, so free allocated memory */
-    current = head;
+    prev = head;
     while (current != NULL)
     {
-        free(current);
-        current = current->next;
+        current = prev->next;
+		free(prev);
     }
+	free (current);
     printf("Bye!\n");
 
     return 0;
