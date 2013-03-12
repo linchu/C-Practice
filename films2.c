@@ -58,6 +58,8 @@ int main(void)
 	free (current);
     printf("Bye!\n");
 
+    getchar();
+
     return 0;
 }
 
